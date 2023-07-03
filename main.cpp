@@ -6,7 +6,7 @@
 #include <ctime>
 
 
-std::std::vector<std::string>  read_pokemon_names(){
+std::vector<std::string>  read_pokemon_names(){
     std::vector<std::string> pokemons;
     std::ifstream file ("pokemon.txt");
     std::string pokemon;
