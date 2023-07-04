@@ -4,6 +4,7 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+using namespace std;
 
 
 std::vector<std::string>  read_pokemon_names(){
