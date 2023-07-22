@@ -7,21 +7,21 @@
 using namespace std;
 
 
-std::vector<std::string>  read_pokemon_names(){
-    std::vector<std::string> pokemons;
-    std::ifstream file ("pokemon.txt");
-    std::string pokemon;
-    while (std::getline(file,pokemon)){
+vector<string>  read_pokemon_names(){
+    vector<string> pokemons;
+    ifstream file ("pokemon.txt");
+    string pokemon;
+    while (getline(file,pokemon)){
         pokemons.push_back(pokemon);
     }
     return pokemons
 }
 
 
-void catch_pokemon(int& pokeballs, int&money, std::vector<std::string>& caught_pokemon) {
-    std::vector<std::string> pokemons = read_pokemon_names();
-    std::string pokemon = pokemons[rand()% pokemons.size()];
-    std::cout<<"a wild "<< pokemon << "appears!"<<std::endl;
+void catch_pokemon(int& pokeballs, int&money, vector<std::string>& caught_pokemon) {
+    vector<string> pokemons = read_pokemon_names();
+    string pokemon = pokemons[rand()% pokemons.size()];
+    cout<<"a wild "<< pokemon << "appears!"<<endl;
     std::cout<<"enter 'c' to catch or 'R'  to run:";
     char action;
     std::cin>>action;
