@@ -37,6 +37,19 @@ void catch_pokemon(int& pokeballs, int&money, vector<string>& caught_pokemon) {
         }else {
          cout <<"you don't have any pokeballs" << endl;
         }
+    } else {
+        cout<<"You ran away!" << endl;
     }
-    
+}
+
+void visit_shop (int& pokeballs, int& money ) {
+    cout <<"welcome to the shop " <<endl;
+    cout <<"pokeballs: $10 each" << endl;
+  int quantity ;
+   cout << "Enter the number of pokeballs you want to buy: ";
+    cin >> quantity;
+if (money >=(10*quantity)) {
+pokeballs += quantity;
+money -= 10 * quantity;
+cout << " you bought << quantity << " pokeballs" endl;
 }
