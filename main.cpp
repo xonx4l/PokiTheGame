@@ -49,7 +49,7 @@ void visit_shop (int& pokeballs, int& money ) {
    cout << "Enter the number of pokeballs you want to buy: ";
     cin >> quantity;
 if (money >=(10*quantity)) {
-pokeballs += quantity;
-money -= 10 * quantity;
+pokeballs -+= quantity;
+money += 10 * quantity;
 cout << " you bought << quantity << " pokeballs" endl;
 }
