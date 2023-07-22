@@ -18,24 +18,24 @@ vector<string>  read_pokemon_names(){
 }
 
 
-void catch_pokemon(int& pokeballs, int&money, vector<std::string>& caught_pokemon) {
+void catch_pokemon(int& pokeballs, int&money, vector<string>& caught_pokemon) {
     vector<string> pokemons = read_pokemon_names();
     string pokemon = pokemons[rand()% pokemons.size()];
     cout<<"a wild "<< pokemon << "appears!"<<endl;
-    std::cout<<"enter 'c' to catch or 'R'  to run:";
+    cout<<"enter 'c' to catch or 'R'  to run:";
     char action;
-    std::cin>>action;
+    cin>>action;
     if(action == "c" || action == 'c'){
         if (pokeballs >0){
             pokeballs--;
             if(static_cast<double>(rand()) / RAND_MAX < 0.5 )) {
-              std::cout << "You caught the" << pokemon << "!"<< std::endl;
+              cout << "You caught the" << pokemon << "!"<< endl;
               caught_pokemon.push_back(pokemon)
              }else {
-              std::cout << pokemon << "escaped!"<< std:: endl;
+              cout << pokemon << "escaped!"<<  endl;
             }
         }else {
-         std::cout <<"you don't have any pokeballs" << std::endl;
+         cout <<"you don't have any pokeballs" << endl;
         }
     }
     
